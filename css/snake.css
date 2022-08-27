@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+.body {
+  background: url("../snake_image/snake.jpg");
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+#scoreBar {
+  position: absolute;
+  top: 300px;
+  left: 70px;
+  font-size: 45px;
+  font-family: "New Tegomin", serif;
+  font-weight: bold;
+}
+#highScore {
+  position: absolute;
+  top: 400px;
+  left: 70px;
+  font-size: 45px;
+  font-family: "New Tegomin", serif;
+  font-weight: bold;
+}
+.bodyBack {
+  background: url("../snake_image/snakeWall.jpg");
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+#play {
+  display: block;
+  width: 15%;
+  height: 45px;
+  background: url("../playbutton.jpg");
+  border-radius: 10px;
+  border: 2px solid black;
+  text-align: center;
+  box-shadow: 10px 30px 27px black;
+  transform: rotate(7deg);
+  animation: mymove 2s infinite alternate;
+}
+@keyframes mymove {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+
+button {
+  background: none;
+  text-align: center;
+  border: none;
+}
+#gameover {
+  display: block;
+  visibility: hidden;
+}
+a:hover {
+  color: yellow;
+}
+a {
+  font-family: "New Tegomin", serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 26px;
+  color: cornsilk;
+}
+#board {
+  background: linear-gradient(white, rgb(194, 194, 248));
+  height: 92vmin;
+  width: 90vmin;
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: repeat(25, 1fr);
+  grid-template-columns: repeat(25, 1fr);
+}
+.head {
+  background: url("../snake_image/snake-svgrepo-com.svg");
+}
+.snake {
+  background-color: rgb(16, 89, 24);
+  border-radius: 16px;
+}
+.food {
+  background-color: rgb(220, 9, 9);
+  border-radius: 16px;
+}
